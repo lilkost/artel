@@ -9,7 +9,6 @@ const animationUraborosAndRunis = () => {
     }
     // функция для проверки на то какой надо подсветить элемент
     const changeStateItem = (num) => {
-        console.log(num);
         itemRemoveClass();
         
         if(num > 0 && num < 50) {
@@ -38,7 +37,6 @@ const animationUraborosAndRunis = () => {
     const intervalId = setInterval(() => {
         getCurrentOpacity();
     }, 1000);
-
 }
 
 export default animationUraborosAndRunis;
