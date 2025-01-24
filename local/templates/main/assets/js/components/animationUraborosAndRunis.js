@@ -10,16 +10,20 @@ const animationUraborosAndRunis = () => {
     // функция для проверки на то какой надо подсветить элемент
     const changeStateItem = (num) => {
         itemRemoveClass();
-        
-        if(num > 0 && num < 50) {
+
+        if(num > 0 && num < 20) {
             items[0].classList.add("is-active");
-        }else if(num > 60 && num < 100) {
+        }
+        else if(num > 20 && num < 60) {
             items[1].classList.add("is-active");
-        }else if(num > 110 && num < 160) {
+        }
+        else if(num > 60 && num < 90) {
             items[2].classList.add("is-active");
-        }else if(num > 230 && num < 270) {
+        }
+        else if(num > 180 && num < 230) {
             items[4].classList.add("is-active");
-        }else if(num > 270 && num < 310) {
+        }
+        else if(num > 230 && num < 290) {
             items[5].classList.add("is-active");
         }
     }
