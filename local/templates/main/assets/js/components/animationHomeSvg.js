@@ -1,5 +1,5 @@
-const loaderAnimation = () => {
-    const parent = document.querySelector(".loader__logo");
+const animationHomeSvg = () => {
+    const parent = document.querySelector(".top-image");
 
     if(!parent) return;
 
@@ -7,12 +7,11 @@ const loaderAnimation = () => {
     
     anime({
         targets: paths,
-        duration: 2000,
+        duration: 4000,
         delay: 200,
         easing: 'easeInCubic',
         strokeDashoffset: [anime.setDashoffset, 0],
-        // fill: ['rgba(0,0,0,0)', 'rgba(242, 199, 145, 1)']
     });
 }
 
-export default loaderAnimation;
+export default animationHomeSvg;

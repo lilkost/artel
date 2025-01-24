@@ -19,6 +19,7 @@ const sliders = () =>{
             {
                 direction: 'horizontal',
                 loop: false,
+                spaceBetween: 13,
                 slidesPerView: 12,
             }
         ],

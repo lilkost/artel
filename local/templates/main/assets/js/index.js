@@ -6,6 +6,8 @@ import qsGsapAnimation from './components/qsGsapAnimation.js';
 import phoneMask from './components/phoneMask.js';
 import animationElectricity from './components/animationElectricity.js';
 import sliders from './components/sliders.js';
+import scrollSlider from './components/scrollingSlider.js';
+import animationHomeSvg from './components/animationHomeSvg.js';
 
 loaderAnimation();
 sliderImages();
@@ -14,3 +16,5 @@ animationUraborosAndRunis();
 phoneMask();
 animationElectricity();
 sliders();
+scrollSlider();
+animationHomeSvg();
