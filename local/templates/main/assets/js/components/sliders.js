@@ -41,7 +41,19 @@ const sliders = () =>{
                     crossFade: true
                 },
             }
-        ]
+        ],
+        [
+            document.querySelector(".steps-construction__slider"),
+            {
+                direction: 'horizontal',
+                loop: false,
+                navigation: {
+                    nextEl: '.what-doing__slider-btn_next',
+                    prevEl: '.what-doing__slider-btn_prev',
+                },
+                slidesPerView: 1.81559,
+            }
+        ],
     ]
     // функция конструктор для создания сладеров
     const createSlider = (node, options) => {

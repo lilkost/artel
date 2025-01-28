@@ -8,6 +8,7 @@ import animationElectricity from './components/animationElectricity.js';
 import sliders from './components/sliders.js';
 import scrollSlider from './components/scrollingSlider.js';
 import animationHomeSvg from './components/animationHomeSvg.js';
+import transformBlockHover from './components/transformBlockHover.js';
 
 loaderAnimation();
 sliderImages();
@@ -18,3 +19,4 @@ animationElectricity();
 sliders();
 scrollSlider();
 animationHomeSvg();
+transformBlockHover();
