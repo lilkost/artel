@@ -65,7 +65,7 @@ const sliders = () =>{
         }
     }
     // вызов конструктора для слайдеров
-    if(sliders.length) {
+    if(sliders && sliders.length) {
         sliders.forEach(slider=> {
             const sliderNode = slider[0];
             const sliderOptions = slider[1];
