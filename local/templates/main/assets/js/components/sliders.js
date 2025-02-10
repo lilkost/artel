@@ -78,6 +78,29 @@ const sliders = () =>{
             }
         });
     }
+
+    // cлайдеры с доп. функционалом
+    if(document.querySelector(".stage-work__pagination") && document.querySelector(".stage-work__slider")) {
+        let swiperPagination = new Swiper('.stage-work__pagination', {
+            direction: 'horizontal',
+            slidesPerView: 5,
+            spaceBetween: 0,
+            watchSlidesProgress: true,
+            loop: false,
+        });
+
+        let swiperParent = new Swiper('.stage-work__slider', {
+            direction: 'horizontal',
+            loop: false,
+            slidesPerView: 1,
+            effect: "fade",
+
+            thumbs: {
+                swiper: swiperPagination,
+            },
+        });
+
+    }
 }
 
 export default sliders;

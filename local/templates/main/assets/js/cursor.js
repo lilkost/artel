@@ -161,6 +161,16 @@
                 targetBlock.style.opacity = '0';
             }
         });
+
+        document.querySelectorAll(".sections-decor-title span").forEach(targetBlock => {
+          const targetRect = targetBlock.getBoundingClientRect();
+  
+          if (isIntersecting(movingRect, targetRect)) {
+              targetBlock.style.opacity = '1';
+          } else {
+              targetBlock.style.opacity = '0';
+          }
+      });
     }
     
     // Проверяем пересечение при загрузке и перемещении блока
