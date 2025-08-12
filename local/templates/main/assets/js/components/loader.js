@@ -11,7 +11,6 @@ const loaderAnimation = () => {
         delay: 200,
         easing: 'easeInCubic',
         strokeDashoffset: [anime.setDashoffset, 0],
-        // fill: ['rgba(0,0,0,0)', 'rgba(242, 199, 145, 1)']
     });
 }
 

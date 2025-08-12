@@ -2,7 +2,7 @@ if(document.querySelector(".canvas__parent")) {
     function ooze() {
         Curves.init(document.querySelector(".canvas__parent"))
     }
-    
+
     Curves = function() {
         function e(e, t) {
             this.points = e,
@@ -15,7 +15,7 @@ if(document.querySelector(".canvas__parent")) {
             l.fillStyle = "#000000",
             i(),
             window.onresize = function() {
-                r()
+                r();
             }
         }
         function n() {
@@ -65,11 +65,11 @@ if(document.querySelector(".canvas__parent")) {
         ,
         $("#ooze").length)
             var a = document.getElementById("ooze")
-              , l = a.getContext("2d");
+                , l = a.getContext("2d");
         var c = window.innerWidth
-          , d = window.innerHeight
-          , u = ["#2f3030", "#5e6060", "#ecf0f1", "#8d9090", "#bcc0c0", "#ecf0f1"]
-          , p = function(t, n, i) {
+            , d = window.innerHeight
+            , u = ["#2f3030", "#5e6060", "#ecf0f1", "#8d9090", "#bcc0c0", "#ecf0f1"]
+            , p = function(t, n, i) {
             for (var o = [], r = 0; r < t; r += 1) {
                 for (var s = [], a = 0, l = 0; l <= c + c / 4; l += i) {
                     var d = 360 * Math.random();
@@ -100,52 +100,7 @@ if(document.querySelector(".canvas__parent")) {
             stopRender: o
         }
     }();
-    $(function() {
-        // var e = {
-        //     prefetch: !0,
-        //     cacheLength: 4,
-        //     blacklist: "form, .no-smoothState",
-        //     onStart: {
-        //         duration: 1500,
-        //         render: function(e) {
-        //             $(".cbp-spmenu").removeClass("cbp-spmenu-open"),
-        //             $(".shape-overlays").css("display", "block").fadeIn("fast"),
-        //             function() {
-        //                 var e = document.querySelector(".shape-overlays");
-        //                 new ShapeOverlays(e).toggle()
-        //             }(),
-        //             hideModals(),
-        //             e.addClass("is-exiting")
-        //         }
-        //     },
-        //     onReady: {
-        //         duration: 0,
-        //         render: function(e, t) {
-        //             e.removeClass("is-exiting"),
-        //             e.html(t)
-        //         }
-        //     },
-        //     onAfter: function() {
-        //         // prepOnLoad(),
-        //         prep(),
-        //         $("#ooze").length && (Curves.stopRender(),
-        //         Curves.startRender()),
-        //         $(".shape-overlays").fadeOut("slow").delay(1e3).css("display", "none)"),
-        //         dataLayer.push({
-        //             event: "virtualPageView",
-        //             virtualUrl: location.pathname,
-        //             virtualTitle: document.title
-        //         }),
-        //         $(window).trigger("resize")
-        //     }
-        // };
-        // $("#main").smoothState(e).data("smoothState")
-    }),
-    $(document).ready(function() {
-        // prepOnLoad(),
-        // prep(),
-        // $(window).trigger("resize")
-    }),
+
     $(window).on("load", function() {
         $.ready.then(function() {
             $("html").css("opacity", "1")

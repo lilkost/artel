@@ -115,10 +115,11 @@
     };  
     // https://codepen.io/santoshcodes/pen/MWZwjoj
     init();
-    
-    
+
     // bock search 
-    
+    window.valueX = 0;
+    window.valueY = 0;
+
     document.addEventListener('mousemove', function(event) {
         const followBlock = document.querySelector('.cursor-circle');
         
@@ -133,8 +134,24 @@
         // Устанавливаем позицию блока так, чтобы он был по центру курсора
         followBlock.style.left = `${x - blockWidth / 2}px`;
         followBlock.style.top = `${y - blockHeight / 2}px`;
+        
+
+        if(document.querySelector(".blok-text-hovering")) {
+          const testBlock = document.querySelector(".blok-text-hovering");
+
+          let posY = (y - blockHeight / 2);
+          let posX = (x - blockWidth / 2);
+
+          
+
+          testBlock.style.left = `-${posX}px`;
+          testBlock.style.top = `-${posY}px`;
+
+          if(posY < 0) testBlock.style.top = `${(posY * -1)}px`;
+          if(posX < 0) testBlock.style.left = `${(posX * -1)}px`;
+          console.log(true);
+        }
     });
-    
     
     // block ><
     const movingBlock = document.querySelector('.cursor-circle');
@@ -142,10 +159,10 @@
     
     function isIntersecting(rect1, rect2) {
         return !(
-            rect1.right < rect2.left ||
-            rect1.left > rect2.right ||
-            rect1.bottom < rect2.top ||
-            rect1.top > rect2.bottom
+          rect1.right < rect2.left ||
+          rect1.left > rect2.right ||
+          rect1.bottom < rect2.top ||
+          rect1.top > rect2.bottom 
         );
     }
     
